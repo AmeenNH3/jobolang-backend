@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://jobolang.herokuapp.com")
 @RequestMapping("/user")
 public class UserController {
 
