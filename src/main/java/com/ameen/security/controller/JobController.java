@@ -23,7 +23,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = "https://jobolang.herokuapp.com")
+@CrossOrigin(origins = {"https://jobolang.herokuapp.com","https://jobolang.netlify.app"})
 @RequestMapping("/job")
 public class JobController {
 
