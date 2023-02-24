@@ -24,10 +24,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.management.remote.JMXAuthenticator;
 import java.util.ArrayList;
 
 @RestController
-@CrossOrigin(origins = {"https://jobolang.herokuapp.com","https://jobolang.netlify.app"})
+@CrossOrigin(origins = {"https://jobolang.herokuapp.com","https://jobolang.netlify.app","http://localhost:3000"})
 @RequestMapping("/user")
 public class UserController {
 
@@ -64,6 +65,7 @@ public class UserController {
             return ResponseEntity.ok(authenticationResponse);
         }
         catch (Exception e){
+            System.out.println(e.getMessage());
             return ResponseEntity.badRequest().body("Error, failed to login !");
         }
     }
